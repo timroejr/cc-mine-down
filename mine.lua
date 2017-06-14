@@ -143,6 +143,12 @@ t = 0
 end
 end
 
+function returnToTop()
+for y = 1, f do
+turtle.moveUp()
+end
+end
+
 text()
 autoFuel()
 turtle.refuel()
@@ -174,6 +180,7 @@ for z = 1, e do
 	end
 end
 end
+returnToTop()
 
 print ""
 print "Mining Complete!"
