@@ -120,17 +120,55 @@ function fuelCheck()
         end
 end
 
+t = 0
+
 function moveDown()
+if t == 0 then
+turtle.digDown()
+turtle.down()
+else
+turtle.turnRight()
+turtle.turnRight()
 turtle.digDown()
 turtle.down()
 end
+end
 
-t = 0
 text()
 autoFuel()
 turtle.refuel()
 print ""
 print "Beginning Mining Process"
+
+for y = 1, f do
+moveDown()
+for z = 1, e do
+	for i = 1, d do
+			fuelCheck()
+			dig()
+	end
+	t = t + 1
+	if z == e then
+	
+	else
+	if t%2 == 0 then
+		turtle.turnLeft();
+		sleep(.5)
+		dig()
+		turtle.turnLeft();
+	else
+		turtle.turnRight();
+		sleep(.5)
+		dig()
+		turtle.turnRight();
+	end
+	end
+end
+
+
+
+
+
 for y = 1, f do
 moveDown()
 for z = 1, e do
