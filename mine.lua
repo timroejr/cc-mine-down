@@ -145,7 +145,7 @@ end
 
 function returnToTop()
 for y = 1, f do
-turtle.moveUp()
+turtle.up()
 end
 end
 
