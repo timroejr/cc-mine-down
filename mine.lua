@@ -164,6 +164,7 @@ for z = 1, e do
 	end
 	end
 end
+end
 
 print ""
 print "Mining Complete!"
