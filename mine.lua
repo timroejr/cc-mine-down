@@ -42,13 +42,25 @@ function start()
         end
 		
 		io.write "Width of Landscape: "
-		e not tonumber(e) then
+		e = io.read()
+		if not tonumber(e) then
 				print ""
 				print "Please enter a valid number"
 				print ""
 				start()
 		else
 			e = tonumber(e)
+		end
+		
+		io.write "Depth: "
+		f = io.read()
+		if not tonumber(f) then
+				print ""
+				print "Please enter a valid number"
+				print ""
+				start()
+		else
+			f = tonumber(f)
 		end
 				
 		
@@ -60,6 +72,13 @@ function start()
         end
 		
 		if e < 1 then
+				print ""
+                print "Number is not valid"
+                print ""
+                start()
+		end
+		
+		if f < 1 then
 				print ""
                 print "Number is not valid"
                 print ""
@@ -101,29 +120,35 @@ function fuelCheck()
         end
 end
 
+function moveDown()
+turtle.digDown()
+turtle.down()
+end
+
 t = 0
 text()
 autoFuel()
 turtle.refuel()
 print ""
 print "Beginning Mining Process"
-turtle.digDown()
-turtle.down()
+for y = 1, f do
+moveDown()
 for z = 1, e do
 	for i = 1, d do
 			fuelCheck()
 			dig()
 	end
 	t = t + 1
-	if t%2 == 0
+	if t%2 == 0 then
 		turtle.turnLeft();
-		dig();
+		sleep(.5)
 		turtle.turnLeft();
 	else
 		turtle.turnRight();
-		dig();
+		sleep(.5)
 		turtle.turnRight();
 	end
+end
 end
 
 print ""
