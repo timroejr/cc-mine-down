@@ -165,30 +165,6 @@ for z = 1, e do
 	end
 end
 
-
-
-
-
-for y = 1, f do
-moveDown()
-for z = 1, e do
-	for i = 1, d do
-			fuelCheck()
-			dig()
-	end
-	t = t + 1
-	if t%2 == 0 then
-		turtle.turnLeft();
-		sleep(.5)
-		turtle.turnLeft();
-	else
-		turtle.turnRight();
-		sleep(.5)
-		turtle.turnRight();
-	end
-end
-end
-
 print ""
 print "Mining Complete!"
 print "Timothy Roe Jr."
