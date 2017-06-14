@@ -139,6 +139,7 @@ end
 turtle.turnRight()
 turtle.digDown()
 turtle.down()
+t = 0
 end
 end
 
