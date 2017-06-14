@@ -132,11 +132,11 @@ turtle.turnRight()
 for j = 1, d do
 turtle.forward()
 end
-turtle.right()
+turtle.turnRight()
 for x = 1, e do
 turtle.forward()
 end
-turtle.right()
+turtle.turnRight()
 turtle.digDown()
 turtle.down()
 end
